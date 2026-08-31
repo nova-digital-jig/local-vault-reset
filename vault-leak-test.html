@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="A five-minute, non-collecting test for vault scope, source authority, retrieval, and agent checkpoints.">
+  <meta name="robots" content="index,follow">
+  <title>Five-minute vault leak test — CourseMax</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="site-header">
+    <a class="brand" href="index.html">CourseMax</a>
+    <nav aria-label="Primary navigation">
+      <a href="syllabus.html">Syllabus</a>
+      <a href="index.html">Course page</a>
+    </nav>
+  </header>
+  <main>
+    <section class="page-intro">
+      <p class="eyebrow">Free · five minutes · no form</p>
+      <h1>Can your vault answer without leaking scope?</h1>
+      <p class="lede">Use synthetic note names. Keep private folders closed.
+        This page stores and sends nothing.</p>
+    </section>
+
+    <section class="module-list" aria-label="Vault leak test">
+      <article class="module">
+        <p>Question 1 · Scope</p>
+        <h2>What exact folder may the tool read?</h2>
+        <p><strong>Pass:</strong> You can name one working folder and an explicit
+          denylist. Journals, family/youth, client, legal, medical, trading,
+          credentials, banking, tax, and uncertain material stay closed.</p>
+        <p><strong>Leak:</strong> The answer is “my vault,” “whatever search
+          finds,” or a broad permission granted for convenience.</p>
+      </article>
+
+      <article class="module">
+        <p>Question 2 · Authority</p>
+        <h2>Which note wins when two answers disagree?</h2>
+        <p><strong>Pass:</strong> One source is explicitly authoritative, with a
+          visible date or freshness signal. The conflict remains visible until
+          an authorized person resolves it.</p>
+        <p><strong>Leak:</strong> The system averages, guesses, or silently uses
+          whichever note appeared first.</p>
+      </article>
+
+      <article class="module">
+        <p>Question 3 · Action</p>
+        <h2>What happens before a tool changes the source?</h2>
+        <p><strong>Pass:</strong> The exact target and before state are observed,
+          the action is classified, the result is visibly verified, and an
+          exact rollback exists.</p>
+        <p><strong>Leak:</strong> Technical access is treated as permission, or
+          the tool reports success without checking the visible result.</p>
+      </article>
+    </section>
+
+    <section class="completion" aria-labelledby="score-title">
+      <p class="section-tag">Your result</p>
+      <h2 id="score-title">Three passes means one path is ready to test.</h2>
+      <p>One or more leaks does not mean your whole vault is broken. It means
+        the first useful job is to bound one safe folder, map its sources, and
+        test retrieval before adding another plugin or agent.</p>
+    </section>
+
+    <section class="final-cta" aria-labelledby="next-title">
+      <p class="section-tag">Build the path</p>
+      <h2 id="next-title">Local Vault Reset turns these three checks into six artifacts.</h2>
+      <div class="actions">
+        <a class="button primary" href="syllabus.html">See all ten lessons</a>
+        <a class="button secondary" href="index.html">Return to the course</a>
+      </div>
+      <p class="microcopy">Current truth: zero verified paid course students,
+        $0 verified course revenue, and LIVE checkout is not active.</p>
+    </section>
+  </main>
+  <footer>
+    <p>CourseMax · Local Vault Reset</p>
+    <p>No outcome, privacy, security, productivity, or income guarantee.</p>
+  </footer>
+</body>
+</html>
