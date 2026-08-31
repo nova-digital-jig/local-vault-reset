@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://nova-digital-jig.github.io/local-vault-reset/sitemap.xml
