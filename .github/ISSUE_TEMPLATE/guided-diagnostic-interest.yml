@@ -1,0 +1,67 @@
+name: Request guided diagnostic availability
+description: Ask about the $197 Local Vault Diagnostic using a public, data-minimized GitHub issue.
+title: "[Guided diagnostic interest] "
+body:
+  - type: markdown
+    attributes:
+      value: |
+        This form creates a **public GitHub issue**. Use only a public-safe summary.
+
+        Do not include credentials, private vault content, customer or client data, school or youth data, religious-community information, legal or medical details, financial account information, or confidential attachments.
+
+        Submitting this form requests an availability reply in the public issue. It does not reserve a slot, schedule a session, activate checkout, or create a payment obligation.
+
+  - type: checkboxes
+    id: eligibility
+    attributes:
+      label: Eligibility and public-data boundary
+      options:
+        - label: I am 18 or older and this request is for an adult business or professional use case.
+          required: true
+        - label: I understand that this issue and all replies are public.
+          required: true
+        - label: I will not post private, restricted, regulated, or confidential information here.
+          required: true
+
+  - type: dropdown
+    id: problem
+    attributes:
+      label: Main problem
+      description: Choose the closest public-safe category.
+      options:
+        - Unclear source of truth
+        - Retrieval is slow or unreliable
+        - AI or agent changes need safer boundaries
+        - Local-first or privacy workflow design
+        - Unsure; needs initial mapping
+    validations:
+      required: true
+
+  - type: textarea
+    id: public_summary
+    attributes:
+      label: Public-safe summary
+      description: In two or three sentences, describe the workflow problem without naming people, clients, private files, or systems that should not be public.
+      placeholder: "Example: Our small software team has duplicate internal notes and cannot consistently identify the approved source before using an AI assistant. We want to map one non-sensitive folder and one retrieval path."
+    validations:
+      required: true
+
+  - type: dropdown
+    id: timing
+    attributes:
+      label: Preferred timing
+      options:
+        - Within two weeks
+        - This month
+        - Later than one month
+        - Researching only
+    validations:
+      required: true
+
+  - type: checkboxes
+    id: next_step
+    attributes:
+      label: Requested next step
+      options:
+        - label: Reply in this public issue if a $197 Local Vault Diagnostic slot becomes available. I understand live booking and payment are not active yet.
+          required: true
